@@ -1,11 +1,32 @@
 
-<img src="http://www.myapifilms.com/imdb?title= + movie"> <%= @body['urlPoster'] %>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Font+Name">
+
+</head>
+
+<a>
+  <p>Search by
+    <select>
+      <option value="title">Title</option>
+      <option value="actors">Actors</option>
+    </select>
+  </p>
+</a>
+
+<img src=<%= @body['urlPoster'] %> alt="urlPoster"
+
 
 <h1>
-  <a href="http://www.myapifilms.com/imdb?title"> <%= @body['title'] %> (<%= @body['year'] %>) </a>
+
+  <a href= <%= @body['title'] %> (<%= @body['year'] %>) </a>
+
 </h1>
 <body>
-<p><%= @body['plot'] %> </p>
-<p><b><%= @body['runtime']%></b></p>
+  <p><%= @body['plot'] %> </p> <p><b><%= @body['runtime']%></b></p>
+  <ul style="list-style-type:none">
+    <li> <p> Rated: <%= @body['rated'] %> </p> </li>
+    <li> <p> Rating: <%= @body['rating']%></p> </li>
+    <li> <p> releaseDate: <%= @body['releaseDate']%></p> </li>
 
 </body>
