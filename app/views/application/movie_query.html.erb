@@ -5,11 +5,11 @@
       <option value="title">Title</option>
       <option value="actors">Name</option>
     </select>
-    <form name="input" action="movie_query" method="get">
-      <input type="text" name="title">
-      <input type="submit" value="search">
-    </form>
-
+    <%= form_tag('/movie_query', method: "POST") do %>
+      <%= label_tag(:q, "search for:") %>
+      <%= text_field_tag(:q) %>
+      <%= submit_tag("search") %>
+    <% end %>
   </p>
 
 
