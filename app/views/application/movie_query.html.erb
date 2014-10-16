@@ -1,32 +1,28 @@
 
-<head>
 
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Font+Name">
-
-</head>
-
-<a>
-  <p>Search by
-    <select>
+  <p>Choose search by:
+    <select name="user_selection">
       <option value="title">Title</option>
-      <option value="actors">Actors</option>
+      <option value="actors">Name</option>
     </select>
+    <form name="input" action="movie_query" method="get">
+      <input type="text" name="title">
+      <input type="submit" value="search">
+    </form>
+
   </p>
-</a>
-
-<img src=<%= @body['urlPoster'] %> alt="urlPoster"
 
 
-<h1>
+<%= image_tag @body['urlPoster'], alt:'poster', class: 'img' %>
 
-  <a href= <%= @body['title'] %> (<%= @body['year'] %>) </a>
+<h1 class="serif">
+    <%= link_to "#{@body['title']}  (#{@body['year']})", @body['urlIMBD'] %> </h1>
 
-</h1>
-<body>
-  <p><%= @body['plot'] %> </p> <p><b><%= @body['runtime']%></b></p>
+
+
+  <p><%= @body['plot'] %> </p>
+  <p id="p01">Runtime: <b><%= @body['runtime']%></b></p>
   <ul style="list-style-type:none">
     <li> <p> Rated: <%= @body['rated'] %> </p> </li>
     <li> <p> Rating: <%= @body['rating']%></p> </li>
     <li> <p> releaseDate: <%= @body['releaseDate']%></p> </li>
-
-</body>
