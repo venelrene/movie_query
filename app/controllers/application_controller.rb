@@ -4,20 +4,19 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 require 'json'
 require 'net/http'
-
   def index
   end
 
   def movie_query
 
   movie = params[:title]
-  uri = URI("http://www.myapifilms.com/imdb?title=" + movie)
+
+  uri = URI('http://www.myapifilms.com/imdb?title=' + movie)
 
 
     response = Net::HTTP.get(uri)
 
     @body = JSON.parse(response).first
-
   end
 
 end
