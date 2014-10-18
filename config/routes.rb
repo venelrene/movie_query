@@ -7,9 +7,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  #match 'movie_query' to: 'application#movie_query' [:get, :post]
    root 'application#movie_query'
    get 'movie_query' => 'application#movie_query'
-  #post  'movie_query' => 'application#movie_query' to allow to post data
+   #post  'movie_query' => 'application#movie_query'
+   #to allow to post data
   #match  '' => '', via [:get, :post] to allow both get and post data
 
   # Example of regular route:
