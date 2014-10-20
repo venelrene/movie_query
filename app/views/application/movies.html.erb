@@ -1,0 +1,40 @@
+<div>
+  <p>Choose search by:
+    <select name="user_selection">
+      <option value="title">Title</option>
+      <option value="actors">Name</option>
+    </select>
+    <%= form_tag("/movie_query", method: "get") do %>
+    <%= text_field_tag('search') %>
+    <%= submit_tag("search") %>
+    <% end %>
+  </p>
+</div>
+
+<% if params[:title].present? %>
+<% if params[:user_selection] == "title" %>
+
+<div>
+  <%= image_tag @body['urlPoster'], alt:'poster', class: 'movie_img' %>
+
+  <h1 class="serif">
+    <%= link_to "#{@body['title']}  (#{@body['year']})", @body['urlIMBD'], class:"title" %> </h1>
+
+    <p><%= @body['plot'] %> </p>
+    <p id="p01">Runtime: <b><%= @body['runtime']%></b></p>
+    <ul style="list-style-type:none">
+      <li> <p> Rated: <%= @body['rated'] %> </p> </li>
+      <li> <p> Rating: <%= @body['rating']%></p> </li>
+      <li> <p> releaseDate: <%= @body['releaseDate']%></p> </li>
+    </div>
+
+    <% else %>
+
+    <div>
+      <%= image_tag @body["urlPhoto"], alt: 'photo' %>
+      <h1 class= "serif">
+        <%= link_to "#{@body["name"]}" %> </h1>
+        <p class="movie_plot italicize"><%= @body["bio"] %><p>
+        </div>
+        <% end %>
+        <% end %>
