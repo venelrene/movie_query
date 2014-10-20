@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   def movie_query
     movie = params[:title]
      if movie.present?
-      if params[movie] == :title
+      if params[:user_selection] == "title"
         uri = URI('http://www.myapifilms.com/imdb?title=' + movie)
       else
         uri = URI('http://www.myapifilms.com/imdb?name=' + movie)

@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  get 'credit_cards/close'
-  get 'credit_cards/credit'
-  get 'credit_cards/debit'
-  get 'credit_cards/open'
+  # get 'credit_cards/close'
+  # get 'credit_cards/credit'
+  # get 'credit_cards/debit'
+  # get 'credit_cards/open'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   #match 'movie_query' to: 'application#movie_query' [:get, :post]
-   root 'application#movie_query'
-   get 'movie_query' => 'application#movie_query'
+   root 'application#movies'
+   get 'movie_query' => 'application#movies'
    #post  'movie_query' => 'application#movie_query'
    #to allow to post data
   #match  '' => '', via [:get, :post] to allow both get and post data
