@@ -1,0 +1,24 @@
+// Place all the styles related to the movies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+p#p01 {
+  color: #d0280c
+}
+
+p.serif {
+    font-family: "Georgia", Times, serif;
+    font-style: italic;
+    font-style: 40px;
+}
+
+body {
+  font-family: 'Tangerine', serif;
+  font-size: 17px;
+}
+
+.img {
+    float: left;
+    margin: 20px 20px;
+}
