@@ -2,16 +2,15 @@ require 'json'
 require 'net/http'
 
 class MoviesController < ApplicationController
-end
-
 
   def index
+    @movie = 'hi'
   end
 
 
 
-  def movie_query
-    movie = params[:title]
+  def movies
+    movie = params[:search]
      if movie.present?
       if params[:user_selection] == "title"
         uri = URI('http://www.myapifilms.com/imdb?title=' + movie)
