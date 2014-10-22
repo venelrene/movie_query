@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   #match 'movie_query' to: 'application#movie_query' [:get, :post]
    root 'application#movies'
-   get 'movies' => 'application#movies'
+   get 'movies' => 'movies#movies'
    #post  'movie_query' => 'application#movie_query'
    #to allow to post data
   #match  '' => '', via [:get, :post] to allow both get and post data
