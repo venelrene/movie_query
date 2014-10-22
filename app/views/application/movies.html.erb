@@ -4,17 +4,17 @@
       <option value="title">Title</option>
       <option value="actors">Name</option>
     </select>
-    <%= form_tag("/movie_query", method: "get") do %>
+    <%= form_tag("/movies", method: "get") do %>
     <%= text_field_tag('search') %>
     <%= submit_tag("search") %>
     <% end %>
   </p>
 </div>
 
-<% if params[:title].present? %>
-<% if params[:user_selection] == "title" %>
+<% if params[:search].present? %>
+  <% if params[:user_selection] == "title" %>
 
-<div>
+  <div>
   <%= image_tag @body['urlPoster'], alt:'poster', class: 'movie_img' %>
 
   <h1 class="serif">
@@ -36,5 +36,9 @@
         <%= link_to "#{@body["name"]}" %> </h1>
         <p class="movie_plot italicize"><%= @body["bio"] %><p>
         </div>
-        <% end %>
-        <% end %>
+  <% end %>
+<% end %>
+
+
+<code> params == <%= params.inspect %></code>
+<%=  @movie %>
