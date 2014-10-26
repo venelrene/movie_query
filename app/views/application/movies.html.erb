@@ -1,15 +1,4 @@
-<div>
-  <p>Choose search by:
-    <select name="user_selection">
-      <option value="title">Title</option>
-      <option value="actors">Name</option>
-    </select>
-    <%= form_tag("/movies", method: "get") do %>
-    <%= text_field_tag('search') %>
-    <%= submit_tag("search") %>
-    <% end %>
-  </p>
-</div>
+
 
 <% if params[:search].present? %>
   <% if params[:user_selection] == "title" %>
@@ -34,10 +23,16 @@
       <%= image_tag @body["urlPhoto"], alt: 'photo' %>
       <h1 class= "serif">
         <%= link_to "#{@body["name"]}" %> </h1>
-        <p class="movie_plot italicize"><%= @body["bio"] %><p>
+        <p> class="movie_plot italicize"><%= @body["bio"] %><p>
         </div>
   <% end %>
 <% end %>
+
+<div>
+  <p> Click on the "Back to Search" link to search again </p>
+  <%= link_to 'Back to Search', root_path %>
+
+</div>
 
 
 <code> params == <%= params.inspect %></code>
