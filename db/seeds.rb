@@ -5,13 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-puts "seed data test!"
-#
-# Faker::Name.name
-# Faker::Internet.email
-# Faker::Date.between(2.days.ago, Date.today)
-puts "#{Faker::Name.name } phone:#{Faker::PhoneNumber.phone_number }"
 
-puts "#{Faker::Name.name } address:#{Faker::Address.street_address }"
+5.times do
+puts Faker::Name.name
+puts Faker::Internet.email
+puts Faker::Date.between(2.days.ago, Date.today)
+end
 
-puts "#{Faker::Name.name } company:#{Faker::Company.name} #{Faker::Company.logo}"
+
+5.times do
+ Faker::Name.name
+end
