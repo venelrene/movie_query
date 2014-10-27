@@ -4,7 +4,7 @@
   <% if params[:user_selection] == "title" %>
 
   <div>
-  <%= image_tag @body['urlPoster'], alt:'poster', class: 'movie_img' %>
+  <%= image_tag @body['urlPoster'], alt:'poster', class: 'img' %>
 
   <h1 class="serif">
     <%= link_to "#{@body['title']}  (#{@body['year']})", @body['urlIMBD'], class:"title" %> </h1>
@@ -33,7 +33,3 @@
   <%= link_to 'Back to Search', root_path %>
 
 </div>
-
-
-<code> params == <%= params.inspect %></code>
-<%=  @movie %>
