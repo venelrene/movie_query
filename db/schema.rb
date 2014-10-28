@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141027155043) do
+ActiveRecord::Schema.define(version: 20141028182625) do
 
   create_table "audios", force: true do |t|
     t.string   "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20141027155043) do
     t.string   "speaker"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "poster"
   end
 
 end

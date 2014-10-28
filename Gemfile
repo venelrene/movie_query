@@ -53,4 +53,8 @@ group :development do
   gem 'sqlite3'
   gem 'pry-rails'
 end
+
 gem  'faker'
+gem 'carrierwave'
+
+gem 'annotate', '~> 2.6.5'

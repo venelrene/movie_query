@@ -6,6 +6,8 @@ class CreateAudios < ActiveRecord::Migration
       t.string :speaker
 
       t.timestamps
+
+      end
     end
   end
 end
