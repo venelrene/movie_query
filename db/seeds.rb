@@ -12,7 +12,13 @@ puts Faker::Internet.email
 puts Faker::Date.between(2.days.ago, Date.today)
 end
 
+#  movies = Movies.new
+#
+# 5.times do
+#   movies.create(name: Faker::Name.name)
+# end
 
-5.times do
- Faker::Name.name
-end
+ actors = Faker::Name.name
+ date = Faker::Date.between(2.days.ago, Date.today)
+
+puts "favorite actor:#{actors} born on #{date}"
