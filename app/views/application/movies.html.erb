@@ -1,31 +1,31 @@
 
 
 <% if params[:search].present? %>
-  <% if params[:user_selection] == "title" %>
+    <% if params[:user_selection] == "title" %>
 
-  <div>
-  <%= image_tag @body['urlPoster'], alt:'poster', class: 'img' %>
+        <div>
+          <%= image_tag @body['urlPoster'], alt:'poster', class: 'img' %>
 
-  <h1 class="serif">
-    <%= link_to "#{@body['title']}  (#{@body['year']})", @body['urlIMBD'], class:"title" %> </h1>
+          <h1 class="serif">
+            <%= link_to "#{@body['title']}  (#{@body['year']})", @body['urlIMBD'], class:"title" %> </h1>
 
-    <p><%= @body['plot'] %> </p>
-    <p id="p01">Runtime: <b><%= @body['runtime']%></b></p>
-    <ul style="list-style-type:none">
-      <li> <p> Rated: <%= @body['rated'] %> </p> </li>
-      <li> <p> Rating: <%= @body['rating']%></p> </li>
-      <li> <p> releaseDate: <%= @body['releaseDate']%></p> </li>
-    </div>
+          <p><%= @body['plot'] %> </p>
+          <p id="p01">Runtime: <b><%= @body['runtime']%></b></p>
+          <ul style="list-style-type:none">
+            <li> <p> Rated: <%= @body['rated'] %> </p> </li>
+            <li> <p> Rating: <%= @body['rating']%></p> </li>
+            <li> <p> releaseDate: <%= @body['releaseDate']%></p> </li>
+        </div>
 
     <% else %>
 
-    <div>
-      <%= image_tag @body["urlPhoto"], alt: 'photo' %>
-      <h1 class= "serif">
-        <%= link_to "#{@body["name"]}" %> </h1>
-        <p> class="movie_plot italicize"><%= @body["bio"] %><p>
+        <div>
+          <%= image_tag @body["urlPhoto"], alt: 'photo' %>
+          <h1 class= "serif">
+            <%= link_to "#{@body["name"]}" %> </h1>
+          <p> class="movie_plot italicize"><%= @body["bio"] %><p>
         </div>
-  <% end %>
+    <% end %>
 <% end %>
 
 <div>
