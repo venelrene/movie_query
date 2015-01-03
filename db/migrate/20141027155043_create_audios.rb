@@ -2,7 +2,7 @@ class CreateAudios < ActiveRecord::Migration
   def change
     create_table :audios do |t|
       t.string :title
-      t.integer :length
+      t.integer:length
       t.string :speaker
 
       t.timestamps
@@ -10,4 +10,4 @@ class CreateAudios < ActiveRecord::Migration
       end
     end
   end
-end
+
