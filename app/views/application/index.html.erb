@@ -1,14 +1,22 @@
-<h1> Movie Search</h1>
+<div class= "container">
+  <h1> Movie Search</h1>
 
-<div>
-  <%= form_tag "/movies" do %>
-  <p>Choose search by:
-    <select name="user_selection">
-      <option value="title">Movie Title</option>
-      <option value="actors">Name</option>
-    </select>
-    <%= text_field_tag('search') %>
-    <%= submit_tag("search") %>
+  <div>
+    <%= form_tag "/movies" do %>
+        <p>Choose search by:
+          <% if cookies[:movie_search].present? %>
+            <p>Previous search <%= cookies[:movie_search] %>
+              <%= link_to "Search Again", movie_path(search: cookies[:movie_search], user_selection: cookies[:movie_search_user_selection]),
+                          class: 'btn btn-default', role: "button", method: "post" %>
+            </p>
+        <% end %>
+
+        <select name="user_selection">
+          <option value="title">Movie Title</option>
+          <option value="actors">Name</option>
+        </select>
+        <%= text_field_tag('search') %>
+        <%= submit_tag("search") %>
     <% end %>
-  </p>
+  </div>
 </div>

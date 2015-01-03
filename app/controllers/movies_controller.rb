@@ -10,8 +10,8 @@ class MoviesController < ApplicationController
 
 
   def movies
-    ccokies.delete(:movie_search)
-    ccokies.delete(:movie_search_user_selection)
+    cookies.delete(:movie_search)
+    cookies.delete(:movie_search_user_selection)
     movie = params[:search]
      if movie.present?
        cookies[:movie_search] = params[:search]
