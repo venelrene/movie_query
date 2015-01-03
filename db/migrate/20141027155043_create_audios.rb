@@ -9,5 +9,5 @@ class CreateAudios < ActiveRecord::Migration
 
       end
     end
-  end
+end
 
