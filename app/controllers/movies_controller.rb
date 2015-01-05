@@ -17,9 +17,9 @@ class MoviesController < ApplicationController
        cookies[:movie_search] = params[:search]
        cookies[:movie_search_user_selection] = params[:user_selection]
       if params[:user_selection] == "title"
-        uri = URI('http://www.myapifilms.com/imdb?title=' + movie)
+        uri = URI('http://www.myapifilms.com/imdb?title=' + URI.escape(movie))
       else
-        uri = URI('http://www.myapifilms.com/imdb?name=' + movie)
+        uri = URI('http://www.myapifilms.com/imdb?name=' + URI.escape(movie))
       end
 
       response = Net::HTTP.get(uri)
