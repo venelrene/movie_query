@@ -14,3 +14,19 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+.idea/workspace.xml
+
+.idea/dataSources.ids
+
+.idea/dataSources.xml
+
+.idea/runConfigurations/Development__movie_query.xml
+
+.idea/runConfigurations/Production__movie_query.xml
+
+.idea/runConfigurations/spec__movie_query.xml
+
+.idea/runConfigurations/test__movie_query.xml
+
+.idea/workspace.xml
